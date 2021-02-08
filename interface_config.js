@@ -86,6 +86,8 @@ var interfaceConfig = {
      */
     DISABLE_VIDEO_BACKGROUND: false,
 
+    DISPLAY_WELCOME_FOOTER: true,
+    DISPLAY_WELCOME_PAGE_ADDITIONAL_CARD: false,
     DISPLAY_WELCOME_PAGE_CONTENT: false,
     DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
 
@@ -94,11 +96,6 @@ var interfaceConfig = {
     ENABLE_FEEDBACK_ANIMATION: false, // Enables feedback star animation.
 
     FILM_STRIP_MAX_HEIGHT: 240,
-
-    /**
-     * Whether to only show the filmstrip (and hide the toolbar).
-     */
-    filmStripOnly: false,
 
     GENERATE_ROOMNAMES_ON_WELCOME_PAGE: false,
 
@@ -136,6 +133,21 @@ var interfaceConfig = {
      */
     MOBILE_APP_PROMO: true,
 
+    /**
+     * Specify custom URL for downloading android mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=com.yogatribes.live',
+
+    /**
+     * Specify custom URL for downloading f droid app.
+     */
+    MOBILE_DOWNLOAD_LINK_F_DROID: 'https://play.google.com/store/apps/details?id=com.yogatribes.live',
+
+    /**
+     * Specify URL for downloading ios mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/yogatribes-live/id1516291045',
+
     NATIVE_APP_NAME: 'YogaTribes Live',
 
     // Names of browsers which should show a warning stating the current browser
@@ -169,7 +181,6 @@ var interfaceConfig = {
     SHOW_JITSI_WATERMARK: true,
     SHOW_POWERED_BY: false,
     SHOW_PROMOTIONAL_CLOSE_PAGE: false,
-    SHOW_WATERMARK_FOR_GUESTS: true, // if watermark is disabled by default, it can be shown only for guests
 
     /*
      * If indicated some of the error dialogs may point to the support URL for
@@ -224,25 +235,10 @@ var interfaceConfig = {
     VIDEO_QUALITY_LABEL_DISABLED: false,
 
     /**
-     * When enabled, the kick participant button will not be presented for users without a JWT
-     */
-    // HIDE_KICK_BUTTON_FOR_GUESTS: false,
-
-    /**
      * How many columns the tile view can expand to. The respected range is
      * between 1 and 5.
      */
     // TILE_VIEW_MAX_COLUMNS: 5,
-
-    /**
-     * Specify custom URL for downloading android mobile app.
-     */
-    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=com.yogatribes.live',
-
-    /**
-     * Specify URL for downloading ios mobile app.
-     */
-    MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/yogatribes-live/id1516291045',
 
     /**
      * Specify Firebase dynamic link properties for the mobile apps.
