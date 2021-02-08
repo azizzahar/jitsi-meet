@@ -131,11 +131,14 @@ class DeepLinkingMobilePage extends Component<Props> {
                                 src = 'images/deep-linking-image.png' />
                             : null
                     }
-                    <p className = { `${_SNS}__text` }>
+                    <p className = { `hidden ${_SNS}__text` }>
                         { t(`${_TNS}.appNotInstalled`, { app: NATIVE_APP_NAME }) }
                     </p>
                     <p className = { `${_SNS}__text` }>
-                        { t(`${_TNS}.ifHaveApp`) }
+                        Vous avez besoin de l'app YogaTribes Live pour vous joindre à la classe sur votre smartphone. Pour une meilleure expérience, nous vous invitons à utiliser un ordinateur avec le navigateur Google Chrome.
+                    </p>
+                    <p className = { `${_SNS}__text` }>
+                        You need the YogaTribes Live app to join the class on your smartphone. For a better experience, please use a computer with Google Chrome browser.
                     </p>
                     <a
                         { ...onOpenLinkProperties }

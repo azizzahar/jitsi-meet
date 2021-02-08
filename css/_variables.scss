@@ -149,7 +149,7 @@ $formPadding: 16px;
 /**
  * Unsupported browser
  */
-$primaryUnsupportedBrowserButtonBgColor: #0052CC;
+$primaryUnsupportedBrowserButtonBgColor: #ec2327;
 $unsupportedBrowserButtonBgColor: rgba(9, 30, 66, 0.04);
 $unsupportedBrowserTextColor: #4a4a4a;
 $unsupportedBrowserTextSmallFontSize: 17px;
@@ -229,11 +229,11 @@ $welcomePageButtonLineHeight: 35px;
 /**
  * Deep-linking page variables.
  */
-$deepLinkingMobileLogoHeight: 40px;
+$deepLinkingMobileLogoHeight: 20px;
 
-$deepLinkingMobileHeaderBackground: #f1f2f5;
+$deepLinkingMobileHeaderBackground: #fff;
 
-$deepLinkingMobileLinkColor: inherit;
+$deepLinkingMobileLinkColor: #ec2327;
 $deepLinkingMobileTextFontSize: inherit;
 $deepLinkingMobileTextLineHeight: inherit;
 

@@ -8,7 +8,8 @@ import {
     PARTICIPANT_LEFT,
     PARTICIPANT_UPDATED,
     PIN_PARTICIPANT,
-    getParticipantById
+    getParticipantById,
+    isLocalParticipantModerator
 } from '../base/participants';
 import { MiddlewareRegistry } from '../base/redux';
 import { TRACK_ADDED, TRACK_REMOVED } from '../base/tracks';
@@ -43,8 +44,12 @@ MiddlewareRegistry.register(store => next => action => {
 
     case PARTICIPANT_JOINED:
         if (!action.participant.local) {
+            // CUSTOM: Condition to add class to remote participant video container
+            // only if it's not a moderator (or user is not a moderator)
             VideoLayout.addRemoteParticipantContainer(
-                getParticipantById(store.getState(), action.participant.id));
+                getParticipantById(store.getState(), action.participant.id),
+                action.participant.role === 'moderator'
+                || isLocalParticipantModerator(store.getState) ? '' : 'hidden-container');
         }
         break;
 

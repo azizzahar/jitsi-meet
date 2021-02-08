@@ -278,10 +278,11 @@ const VideoLayout = {
      * Creates a participant container for the given id.
      *
      * @param {Object} participant - The redux representation of a remote
+     * @param {String} customClassName - CUSTOM: ClassName to add to the remoteVideoContainer
      * participant.
      * @returns {void}
      */
-    addRemoteParticipantContainer(participant) {
+    addRemoteParticipantContainer(participant, customClassName = '') {
         if (!participant || participant.local) {
             return;
         } else if (participant.isFakeParticipant) {
@@ -304,6 +305,11 @@ const VideoLayout = {
 
         this.updateMutedForNoTracks(id, 'audio');
         this.updateMutedForNoTracks(id, 'video');
+
+        // CUSTOM: Add class to remote participant video
+        if (customClassName !== '') {
+            remoteVideo.$container.addClass(customClassName);
+        }
     },
 
     /**
