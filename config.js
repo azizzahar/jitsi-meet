@@ -6,23 +6,23 @@ var config = {
 
     hosts: {
         // XMPP domain.
-        domain: 'jitsi-meet.example.com',
+        domain: 'live1.yogatribes.com',
 
         // When using authentication, domain for guest users.
         // anonymousdomain: 'guest.example.com',
 
         // Domain for authenticated users. Defaults to <domain>.
-        // authdomain: 'jitsi-meet.example.com',
+        // authdomain: 'live1.yogatribes.com',
 
         // Focus component domain. Defaults to focus.<domain>.
-        // focus: 'focus.jitsi-meet.example.com',
+        // focus: 'focus.live1.yogatribes.com',
 
         // XMPP MUC domain. FIXME: use XEP-0030 to discover it.
-        muc: 'conference.jitsi-meet.example.com'
+        muc: 'conference.live1.yogatribes.com'
     },
 
     // BOSH URL. FIXME: use XEP-0156 to discover it.
-    bosh: '//jitsi-meet.example.com/http-bind',
+    bosh: '//live1.yogatribes.com/http-bind',
 
     // Websocket URL
     // websocket: 'wss://jitsi-meet.example.com/xmpp-websocket',
@@ -33,7 +33,7 @@ var config = {
     // The real JID of focus participant - can be overridden here
     // Do not change username - FIXME: Make focus username configurable
     // https://github.com/jitsi/jitsi-meet/issues/7376
-    // focusUserJid: 'focus@auth.jitsi-meet.example.com',
+    // focusUserJid: 'focus@auth.live1.yogatribes.com',
 
 
     // Testing / experimental features.
@@ -107,7 +107,7 @@ var config = {
     // startAudioOnly: false,
 
     // Every participant after the Nth will start audio muted.
-    // startAudioMuted: 10,
+    startAudioMuted: 1,
 
     // Start calls with audio muted. Unlike the option above, this one is only
     // applied locally. FIXME: having these 2 options is confusing.
@@ -158,7 +158,7 @@ var config = {
     // enableLayerSuspension: false,
 
     // Every participant after the Nth will start video muted.
-    // startVideoMuted: 10,
+    startVideoMuted: 1,
 
     // Start calls with video muted. Unlike the option above, this one is only
     // applied locally. FIXME: having these 2 options is confusing.
@@ -189,15 +189,15 @@ var config = {
     // Recording
 
     // Whether to enable file recording or not.
-    // fileRecordingsEnabled: false,
+    fileRecordingsEnabled: true,
     // Enable the dropbox integration.
     // dropbox: {
     //     appKey: '<APP_KEY>' // Specify your app key here.
     //     // A URL to redirect the user to, after authenticating
     //     // by default uses:
-    //     // 'https://jitsi-meet.example.com/static/oauth.html'
+    //     // 'https://live1.yogatribes.com/static/oauth.html'
     //     redirectURI:
-    //          'https://jitsi-meet.example.com/subfolder/static/oauth.html'
+    //          'https://live1.yogatribes.com/subfolder/static/oauth.html'
     // },
     // When integrations like dropbox are enabled only that will be shown,
     // by enabling fileRecordingsServiceEnabled, we show both the integrations
@@ -210,7 +210,8 @@ var config = {
     // fileRecordingsServiceSharingEnabled: false,
 
     // Whether to enable live streaming or not.
-    // liveStreamingEnabled: false,
+    liveStreamingEnabled: true,
+    hiddenDomain: 'recorder.live1.yogatribes.com',
 
     // Transcription (in interface_config,
     // subtitles and buttons can be configured)
@@ -372,7 +373,7 @@ var config = {
     // disableProfile: false,
 
     // Whether or not some features are checked based on token.
-    // enableFeaturesBasedOnToken: false,
+    enableFeaturesBasedOnToken: true,
 
     // When enabled the password used for locking a room is restricted to up to the number of digits specified
     // roomPasswordNumberOfDigits: 10,
@@ -646,7 +647,7 @@ var config = {
     // moderatedRoomServiceUrl: 'https://moderated.jitsi-meet.example.com',
 
     // If true, tile view will not be enabled automatically when the participants count threshold is reached.
-    // disableTileView: true,
+    disableTileView: true,
 
     // Hides the conference subject
     // hideConferenceSubject: true
